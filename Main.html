@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="icon.ico" href="icon.ico">
+    <TITLE>Tiranga</TITLE>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</HEAD>
+
+<body onload="myFunction()">
+    <div id="loading"></div>
+
+    <header class="Headerinnit">
+        <img src="Images/Logo.png" alt="logo">
+
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li><a href="#">Home ✓</a></li>
+                    <li><a href="1857.html">1857</a></li>
+                    <li><a href="1905-1911.html">1905-1911</a></li>
+                    <li><a href="1911.html">1911</a></li>
+                    <li><a href="1914-1917.html">1914-1917</a></li>
+                    <li><a href="1916-1918.html">1916-1918</a></li>
+                    <li><a href="1917.html">1917</a></li>
+                    <li><a href="1919.html">1919</a></li>
+                    <li><a href="1920.html">1920</a></li>
+                    <li><a href="1922.html">1922</a></li>
+                    <li><a href="1928.html">1928</a></li>
+                    <li><a href="1930.html">1930</a></li>
+                    <li><a href="1935.html">1935</a></li>
+                    <li><a href="1940.html">1940</a></li>
+                    <li><a href="1942.html">1942</a></li>
+                    <li><a href="1947.html">1947</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="Sources.html">Sources</a></li>
+                    <li><a href="Feedback.html">Feedback</a></li>
+            </div>
+        </nav>
+
+    </header>
+    <div class="parent">
+        <a href="1857.html"><img class="tfw" src="Images/InFlag.png" alt="flag"></a>
+        <b>
+            <h1>Let's dive into the history of Tiranga</h1>
+        </b>
+        <p>“Live as if you were to die tomorrow. Learn as if you were to live forever.”
+            <br> ― Mahatma Gandhi
+        </p>
+    </div>
+
+
+    <script>
+        var preloader = document.getElementById('loading');
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+    </script>
+</body>
+
+</HTML>

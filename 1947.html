@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <title>1947</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        body {
+            position: relative;
+        }
+
+        h1 {
+
+            position: absolute;
+            color: rgb(255, 255, 255);
+            top: 9%;
+            left: 23%;
+
+
+        }
+
+        .Image {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            background-image: url('Collage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+            
+        }
+
+        .Image-overlay {
+            width: 100%;
+            height: 175vh;
+            background-color: rgba(37, 37, 37, 0.45);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+        }
+
+        .Flag {
+            position: absolute;
+            top: 26%;
+            left: 35%;
+            opacity: 0.6;
+            height: 650px;
+        }
+
+        .Flag:hover {
+            opacity: 1;
+            transform: translateY(-78px);
+            border-radius: 0;
+            -webkit-transition: all 1.8s ease;
+            transition: all 1.8s ease;
+            cursor: pointer;
+        }
+
+        #menuToggle {
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+
+            z-index: 1;
+
+            -webkit-user-select: none;
+            user-select: none;
+
+
+        }
+
+        #menuToggle a {
+            text-decoration: none;
+            color: #fff;
+
+            transition: color 0.3s ease;
+
+        }
+
+        #menuToggle a:hover {
+            color: tomato;
+        }
+
+
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+
+            cursor: pointer;
+
+            opacity: 0;
+            z-index: 2;
+
+            -webkit-touch-callout: none;
+            
+        }
+
+
+        #menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+
+            background: #ffffff;
+            border-radius: 3px;
+
+            z-index: 1;
+
+            transform-origin: 4px 0px;
+
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+                
+        }
+
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+
+        #menuToggle input:checked~span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #f1f1f1;
+        }
+
+        #menuToggle input:checked~span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+
+        #menuToggle input:checked~span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menu {
+            position: absolute;
+            width: 300px;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: 125px;
+
+            background: #000;
+            opacity: 0.925;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        }
+
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+        }
+
+        #menuToggle input:checked~ul {
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a href="Main.html">Home</a></li>
+                <li><a href="1857.html">1857</a></li>
+                <li><a href="1905-1911.html">1905-1911</a></li>
+                <li><a href="1911.html">1911</a></li>
+                <li><a href="1914-1917.html">1914-1917</a></li>
+                <li><a href="1916-1918.html">1916-1918</a></li>
+                <li><a href="1917.html">1917</a></li>
+                <li><a href="1919.html">1919</a></li>
+                <li><a href="1920.html">1920</a></li>
+                <li><a href="1922.html">1922</a></li>
+                <li><a href="1928.html">1928</a></li>
+                <li><a href="1930.html">1930</a></li>
+                <li><a href="1935.html">1935</a></li>
+                <li><a href="1940.html">1940</a></li>
+                <li><a href="1942.html">1942</a></li>
+                <li><a href="1947.html">1947 ✓</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Sources.html">Sources</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+        </div>
+    </nav>
+
+    <div class="Image">
+        <div class="Image-overlay">
+            <h1>We Achieved Freedom thus after</h1>
+        </div>
+        <a href="1947-2.html"><img class="Flag" src="1947Index/flag_In.png"></a>
+    </div>
+</body>
+
+</html>

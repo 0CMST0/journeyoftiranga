@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack</title>
+    <!-- <link rel="stylesheet" href="dropdown menu and footer style sheet.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+            text-align: center;
+            background: #fff;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            background: rgb(47, 47, 47);
+            padding: 20px 30px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container .post {
+            display: none;
+        }
+
+        .container .text {
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+        }
+
+        .container .edit {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .container .edit:hover {
+            text-decoration: underline;
+
+
+        }
+
+        .container .star-widget input {
+            display: none;
+        }
+
+        .star-widget label {
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            float: right;
+            transition: all 0.2s ease;
+        }
+
+        input:not(:checked)~label:hover,
+        input:not(:checked)~label:hover~label {
+            color: #fd4;
+        }
+
+        input:checked~label {
+            color: #fd4;
+        }
+
+        input#rate-5:checked~label {
+            color: #fe7;
+            text-shadow: 0 0 20px #952;
+        }
+
+        #rate-1:checked~form header:before {
+            content: "Abomination";
+        }
+
+        #rate-2:checked~form header:before {
+            content: "Disfavour";
+        }
+
+        #rate-3:checked~form header:before {
+            content: "Neutral";
+        }
+
+        #rate-4:checked~form header:before {
+            content: "Acclaimed";
+        }
+
+        #rate-5:checked~form header:before {
+            content: "Appreciation";
+        }
+
+        .container form {
+            display: none;
+        }
+
+        input:checked~form {
+            display: block;
+        }
+
+        form header {
+            width: 100%;
+            font-size: 25px;
+            color: #fe7;
+            font-weight: 500;
+            margin: 5px 0 20px 0;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        form .textarea {
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        form .textarea textarea {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #eee;
+            border: 1px solid rgb(65, 65, 65);
+            background: rgb(0, 0, 0);
+            padding: 10px;
+            font-size: 17px;
+            resize: none;
+        }
+
+        .textarea textarea:focus {
+            border-color: rgb(0, 0, 0);
+        }
+
+        form .btn {
+            height: 45px;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        form .btn button {
+            height: 100%;
+            width: 100%;
+            border: 1px solid rgb(65, 65, 65);
+            outline: none;
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        form .btn button:hover {
+            background: #555555;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header class="header">
+        <div class="main-heading">
+            Feed Back Form
+        </div>
+        <img class="logo" src="Logo.png" alt="missing">
+        <div class="dropdown">
+            <button class="dropbtn">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+            <div class="dropdown-content">
+                <a href="Main.html">Home</a>
+                <a href="1857.html">1857</a>
+                <a href="1905-1911.html">1905-1911</a>
+                <a href="1911.html">1911</a>
+                <a href="1914-1917.html">1914-1917</a>
+                <a href="1916-1918.html">1916-1918</a>
+                <a href="1917.html">1917</a>
+                <a href="1919.html">1919</a>
+                <a href="1920.html">1920</a>
+                <a href="1922.html">1922</a>
+                <a href="1928.html">1928</a>
+                <a href="1930.html">1930</a>
+                <a href="1935.html">1935</a>
+                <a href="1940.html">1940</a>
+                <a href="1942.html">1942</a>
+                <a href="1947.html">1947</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Sources.html">Sources</a>
+                <a href="Feedback.html">Feedback ✓</a>
+            </div>
+        </div>
+    </header> -->
+
+    <div class="container">
+        <div class="post">
+            <div class="text">Thanks for rating us!</div>
+            <div class="edit">EDIT</div>
+        </div>
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fas fa-star"></label>
+            <form action="#">
+                <header></header>
+                <div class="textarea">
+                    <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector("button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".star-widget");
+        const editBtn = document.querySelector(".edit");
+        btn.onclick = () => {
+            widget.style.display = "none";
+            post.style.display = "block";
+            editBtn.onclick = () => {
+                widget.style.display = "block";
+                post.style.display = "none";
+            }
+            return false;
+        }
+    </script>
+
+
+
+
+
+
+    <!-- <div id="footer">
+        <footer>
+            <img class="col-1" id="footer-logo" src="Logo.png" alt="missing">
+            <ol class="col-2">
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Sources.html">Sources</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ol>
+            <ol class="col-3">
+                <li><b>Contact Us</b></li>
+                <li>E-mail:creatamaniastudios@gmail.com</li>
+            </ol>
+            <div class="col-4">
+                <label for="school-logo">Supported By</label><br><a href="https://www.srmps.edu.in/"><img id="school-logo" src="school logo.jpeg" alt="missing"></a>
+            </div>
+        </footer>
+    </div> -->
+</body>
+
+</html>
